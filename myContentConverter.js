@@ -18,7 +18,7 @@ const convertHEICToJPEG = async (inputFilePath, outputDir) => {
   const { dir, name } = path.parse(inputFilePath);
 
   await sharp(outputBuffer)
-    .resize({ width: 1200 })
+    .resize({ width: 1920 })
     .toFile(path.join(dir.replace("input", outputDir), `${name}.jpeg`));
 // .toFile(`${outputDir}/${path.basename(inputFilePath, '.heic')}.jpeg`);
 
